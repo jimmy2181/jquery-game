@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Room-237</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class = "description">
+        <h1>Room 237</h1>
+
+        <h2 >Rules of the Game</h2>
+        <p>You will be given a random number at the start of the game.  There are four characters below.  By clicking on a character you will add a specific amount of points to your total score.  You win the game by matching your total score to the room number in the Overlook Hotel, you lose the game if your total score goes above the random room number.</p>
+        <p>The value of each character is hidden from you until you click on it.  Each time the game starts, the game will change the values of each character.</p>
+        <br>
+    </div>
+    <br>
+    <div class="container" id= "scores">
+    <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Room Number:</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+          <br>
+          <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Your Score:</h5>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+          <br>
+          <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Wins:</h5>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+            <br>
+            <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Losses:</h5>
+                      <p class="card-text"></p>
+                    </div>
+                  </div>
+                </div>
+                <br>
+          <div class="container" id = "buttons">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="images" id="jack"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="images" id="dick"></div> 
+                  </div>
+                  <div class="col-3">
+                    <div class="images" id="danny"></div>
+                  </div>
+                  <div class="col-3">
+                        <div class="images" id="twins"></div> 
+                      </div>
+                </div>
+              </div>
+              <br>
+              <script type="text/javascript">
+                $(document).ready(function() {
+                var jackNumber =  Math.floor(Math.random() * 11) + 1;
+                var dickNumber =  Math.floor(Math.random() * 11) + 1;
+                var twinsNumber = Math.floor(Math.random() * 11) + 1;
+                var dannyNumber = Math.floor(Math.random() * 11) + 1;
+                var wins = 0;
+                var losses = 0;
+                var roomNumber = Math.floor(Math.random() * 101) + 19;
+                var ultimateWin = 237
+                var yourNumber = 0;
+
+
+            $("#jack").on("click", function() {
+            console.log(jackNumber)
+                
+            });
+            $("#dick").on("click", function() {
+                dickNumber + yourNumber
+            });
+            $("#twins").on("click", function() {
+                twinsNumber + yourNumber
+            });
+            $("#danny").on("click", function() {
+                dannyNumber + yourNumber
+            });
+            console.log(yourNumber)
+                });
+            </script>
+            
+</body>
+</html>
